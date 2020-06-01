@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -32,11 +33,13 @@ class HomeFragment : Fragment() {
         })
 
         btn_to_dashboard.setOnClickListener {
-            findNavController().navigate(HomeFragmentDirections.toDashboard(
-                "id-123456",
-                "Yuhei",
-                "Tokyo"
-            ))
+            findNavController().navigate(
+                R.id.to_dashboard, bundleOf(
+                    "id" to "id-123456",
+                    "name" to "Yuhei",
+                    "location" to "Tokyo"
+                )
+            )
             // findNavController().navigate(R.id.to_dashboard)
         }
     }
