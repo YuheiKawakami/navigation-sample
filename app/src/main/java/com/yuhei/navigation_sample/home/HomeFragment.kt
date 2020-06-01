@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.yuhei.navigation_sample.R
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -31,7 +32,8 @@ class HomeFragment : Fragment() {
         })
 
         btn_to_dashboard.setOnClickListener {
-            Snackbar.make(view, "Button Clicked", Snackbar.LENGTH_SHORT).show()
+            findNavController().navigate(HomeFragmentDirections.toDashboard())
+            // findNavController().navigate(R.id.to_dashboard)
         }
     }
 }
