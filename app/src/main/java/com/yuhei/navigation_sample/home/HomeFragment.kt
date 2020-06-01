@@ -32,7 +32,11 @@ class HomeFragment : Fragment() {
         })
 
         btn_to_dashboard.setOnClickListener {
-            findNavController().navigate(HomeFragmentDirections.toDashboard())
+            findNavController().navigate(HomeFragmentDirections.toDashboard(
+                "id-123456",
+                "Yuhei",
+                "Tokyo"
+            ))
             // findNavController().navigate(R.id.to_dashboard)
         }
     }

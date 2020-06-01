@@ -25,6 +25,21 @@
         android:id="@+id/fragment_dashboard"
         android:name="com.yuhei.navigation_sample.dashboard.DashboardFragment"
         android:label="DashboardFragment"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard">
+
+        <argument
+            android:name="id"
+            app:argType="string" />
+
+        <argument
+            android:name="name"
+            app:argType="string" />
+
+        <argument
+            android:name="location"
+            android:defaultValue="none"
+            app:argType="string" />
+        
+    </fragment>
 
 </navigation>
