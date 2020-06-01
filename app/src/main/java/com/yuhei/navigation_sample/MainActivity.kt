@@ -15,6 +15,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val navController = findNavController(R.id.nav_host_fragment)
+        setupActionBarWithNavController(
+            navController, AppBarConfiguration(
+                setOf(
+                    R.id.fragment_home,
+                    R.id.fragment_dashboard
+                )
+            )
+        )
         nav_view.setupWithNavController(navController)
     }
 }
