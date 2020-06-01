@@ -32,15 +32,15 @@ class HomeFragment : Fragment() {
             text_home.text = it
         })
 
-        btn_to_dashboard.setOnClickListener {
-            findNavController().navigate(
-                R.id.to_dashboard, bundleOf(
-                    "id" to "id-123456",
-                    "name" to "Yuhei",
-                    "location" to "Tokyo"
-                )
-            )
-            // findNavController().navigate(R.id.to_dashboard)
-        }
+//        btn_to_dashboard.setOnClickListener {
+//            findNavController().navigate(
+//                R.id.to_dashboard, bundleOf(
+//                    "id" to "id-123456",
+//                    "name" to "Yuhei",
+//                    "location" to "Tokyo"
+//                )
+//            )
+//            // findNavController().navigate(R.id.to_dashboard)
+//        }
     }
 }

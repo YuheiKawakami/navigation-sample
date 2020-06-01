@@ -14,7 +14,7 @@
         tools:layout="@layout/fragment_home">
 
         <action
-            android:id="@+id/to_dashboard"
+            android:id="@+id/fragment_dashboard"
             app:destination="@id/included_graph"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"

@@ -16,7 +16,7 @@ class DashboardFragment : Fragment() {
 
     private val dashboardViewModel: DashboardViewModel by viewModels()
 
-    private val args: DashboardFragmentArgs by navArgs()
+//    private val args: DashboardFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,7 +31,8 @@ class DashboardFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
-            text_dashboard.text = "${args.id}, ${args.name}, ${args.location}"
+            text_dashboard.text = it
+//            text_dashboard.text = "${args.id}, ${args.name}, ${args.location}"
         })
     }
 }
